@@ -15,7 +15,16 @@ ${num1}/${num2}=${quotient}`);
 */
 
 
-let hours = prompt("Введіть кількість годин:");
+/*let hours = prompt("Введіть кількість годин:");
 let seconds = hours * 60 * 60;
 
 alert(` ${hours} годин = ${seconds} секунд`);
+*/
+
+let numb1 = prompt ('Введіть число:')
+let numb2 = prompt ('Введіть ще число:')
+let numb3 = prompt ('Введіть і ще число:')
+
+let sumOfnumb = (Number(numb1) + Number(numb2) + Number(numb3)) / 3
+
+alert (`середнє арифметичне ${sumOfnumb}`)
