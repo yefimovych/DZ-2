@@ -1,3 +1,4 @@
+/*
 let num1 = prompt ("Введіть перше число:");
 let num2 = prompt("Введіть друге число:");
 
@@ -11,3 +12,10 @@ alert(`${num1}+${num2}=${sum}\n
 ${num1}-${num2}=${minus}\n
 ${num1}*${num2}=${product}\n
 ${num1}/${num2}=${quotient}`);
+*/
+
+
+let hours = prompt("Введіть кількість годин:");
+let seconds = hours * 60 * 60;
+
+alert(` ${hours} годин = ${seconds} секунд`);
