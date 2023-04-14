@@ -21,10 +21,28 @@ let seconds = hours * 60 * 60;
 alert(` ${hours} годин = ${seconds} секунд`);
 */
 
-let numb1 = prompt ('Введіть число:')
-let numb2 = prompt ('Введіть ще число:')
-let numb3 = prompt ('Введіть і ще число:')
+// let numb1 = prompt ('Введіть число:')
+// let numb2 = prompt ('Введіть ще число:')
+// let numb3 = prompt ('Введіть і ще число:')
 
-let sumOfnumb = (Number(numb1) + Number(numb2) + Number(numb3)) / 3
+// let sumOfnumb = (Number(numb1) + Number(numb2) + Number(numb3)) / 3
 
-alert (`середнє арифметичне ${sumOfnumb}`)
+// alert (`середнє арифметичне ${sumOfnumb}`)
+
+let numOrStr = prompt('input number or string');
+console.log(numOrStr)
+    
+switch (numOrStr) {
+    case null: 
+        console.log('ви скасували');
+    break;
+    case '': 
+        console.log('Empty String');
+    break;
+    case isNaN( +numOrStr ): 
+        console.log(' number is Ba_NaN');
+    break;
+    default: 
+        console.log('OK!');
+}
+    
