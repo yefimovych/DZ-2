@@ -29,20 +29,62 @@ alert(` ${hours} годин = ${seconds} секунд`);
 
 // alert (`середнє арифметичне ${sumOfnumb}`)
 
-let numOrStr = prompt('input number or string');
-console.log(numOrStr)
+// let numOrStr = prompt('input number or string');
+// console.log(numOrStr)
     
-switch (numOrStr) {
-    case null: 
-        console.log('ви скасували');
-    break;
-    case '': 
-        console.log('Empty String');
-    break;
-    case isNaN( +numOrStr ): 
-        console.log(' number is Ba_NaN');
-    break;
-    default: 
-        console.log('OK!');
-}
-    
+// switch (numOrStr) {
+//     case null: 
+//         console.log('ви скасували');
+//     break;
+//     case '': 
+//         console.log('Empty String');
+//     break;
+//     case isNaN( +numOrStr ): 
+//         console.log(' number is Ba_NaN');
+//     break;
+//     default: 
+//         console.log('OK!');
+// }
+
+
+// const userYearBorn = prompt("Рік народження:")
+// console.log(userYearBorn)
+// const cityUser = prompt("В якому місті ти живеш?")
+// console.log(cityUser)
+// const sportUser = prompt("Який твій улюблений вид спорту?")
+// console.log(sportUser)
+
+// let userAge = 2023 - Number(userYearBorn)
+
+// cityUser == "Київ"? 
+//     alert ("Ти живеш у столиці України") : alert (`ти живеш у місті ${cityUser}`) ;
+// cityUser == "Лондон"? 
+//     alert ("Ти живеш у столиці Британії") : alert (`ти живеш у місті ${cityUser}`) ;
+// cityUser == "Вашингтон"? 
+//     alert ("Ти живеш у столиці США") : alert (`ти живеш у місті ${cityUser}`)
+
+
+const userYearBorn = prompt("Рік народження:")
+    console.log(userYearBorn)
+const cityUser = prompt("В якому місті ти живеш?")
+    console.log(cityUser)
+
+
+ let userAge = 2023-Number(userYearBorn)
+ console.log(userAge)
+
+cityUser === "Київ"? alert (`Тобі ${userAge} роки. Ти живеш у столиці України`) : 
+cityUser === "Лондон"? alert (`Тобі ${userAge} роки. Ти живеш у столиці Британії`) : 
+cityUser === "Вашингтон"? alert (`Тобі ${userAge} роки.Ти живеш у столиці США`) : alert ( `${userAge} ти живеш у місті ${cityUser}`)
+
+let userSport = prompt("Введіть ваш улюблений вид спорту:")
+    console.log(userSport)
+let champions = (userSport === "футбол") ? "Ліонелем Мессі" :
+    (userSport === "баскетбол") ? "Майкло Джо́рданом" :
+    (userSport === "теніс") ? "Роджером Федерером" : "";
+if (champions !== "") {
+    alert(champions ? "Круто! Хочеш стати " + champions + "?" : "Шкода, що Ви не захотіли ввести вид спорту.");
+} 
+else {
+    alert("Шкода, що Ви не захотіли ввести свої данні");
+} 
