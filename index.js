@@ -64,27 +64,40 @@ alert(` ${hours} годин = ${seconds} секунд`);
 //     alert ("Ти живеш у столиці США") : alert (`ти живеш у місті ${cityUser}`)
 
 
-const userYearBorn = prompt("Рік народження:")
-    console.log(userYearBorn)
-const cityUser = prompt("В якому місті ти живеш?")
-    console.log(cityUser)
+// const userYearBorn = prompt("Рік народження:")
+//     console.log(userYearBorn)
+// const cityUser = prompt("В якому місті ти живеш?")
+//     console.log(cityUser)
 
 
- let userAge = 2023-Number(userYearBorn)
- console.log(userAge)
+//  let userAge = 2023-Number(userYearBorn)
+//  console.log(userAge)
 
-cityUser === "Київ"? alert (`Тобі ${userAge} роки. Ти живеш у столиці України`) : 
-cityUser === "Лондон"? alert (`Тобі ${userAge} роки. Ти живеш у столиці Британії`) : 
-cityUser === "Вашингтон"? alert (`Тобі ${userAge} роки.Ти живеш у столиці США`) : alert ( `${userAge} ти живеш у місті ${cityUser}`)
+// cityUser === "Київ"? alert (`Тобі ${userAge} роки. Ти живеш у столиці України`) : 
+// cityUser === "Лондон"? alert (`Тобі ${userAge} роки. Ти живеш у столиці Британії`) : 
+// cityUser === "Вашингтон"? alert (`Тобі ${userAge} роки.Ти живеш у столиці США`) : alert ( `${userAge} ти живеш у місті ${cityUser}`)
 
-let userSport = prompt("Введіть ваш улюблений вид спорту:")
-    console.log(userSport)
-let champions = (userSport === "футбол") ? "Ліонелем Мессі" :
-    (userSport === "баскетбол") ? "Майкло Джо́рданом" :
-    (userSport === "теніс") ? "Роджером Федерером" : "";
-if (champions !== "") {
-    alert(champions ? "Круто! Хочеш стати " + champions + "?" : "Шкода, що Ви не захотіли ввести вид спорту.");
-} 
-else {
-    alert("Шкода, що Ви не захотіли ввести свої данні");
-} 
+// let userSport = prompt("Введіть ваш улюблений вид спорту:")
+//     console.log(userSport)
+// let champions = (userSport === "футбол") ? "Ліонелем Мессі" :
+//     (userSport === "баскетбол") ? "Майкло Джо́рданом" :
+//     (userSport === "теніс") ? "Роджером Федерером" : "";
+// if (champions !== "") {
+//     alert(champions ? "Круто! Хочеш стати " + champions + "?" : "Шкода, що Ви не захотіли ввести вид спорту.");
+// } 
+// else {
+//     alert("Шкода, що Ви не захотіли ввести свої данні");
+// } 
+
+let length = prompt("Введіть довжину масиву:");
+let arr = [];
+
+for (let i = 0; i < length; i++) {
+  let element = prompt(`Введіть елемент з індексом ${i}:`);
+  arr.push(element);
+}
+
+arr.sort();
+arr.splice(1, 4);
+
+console.log("Вміст масиву:", arr);
