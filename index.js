@@ -89,15 +89,47 @@ alert(` ${hours} годин = ${seconds} секунд`);
 //     alert("Шкода, що Ви не захотіли ввести свої данні");
 // } 
 
-let length = prompt("Введіть довжину масиву:");
-let arr = [];
+// let length = prompt("Введіть довжину масиву:");
+// let arr = [];
 
-for (let i = 0; i < length; i++) {
-  let element = prompt(`Введіть елемент з індексом ${i}:`);
-  arr.push(element);
+// for (let i = 0; i < length; i++) {
+//   let element = prompt(`Введіть елемент з індексом ${i}:`);
+//   arr.push(element);
+// }
+
+// arr.sort();
+// arr.splice(1, 4);
+
+// console.log("Вміст масиву:", arr);
+
+let newNumber = ''; 
+for (let i = 10; i <= 20; i++) { newNumber += i + ', '; } 
+console.log(newNumber);
+for (let i = 10; i <= 20; i++) {
+  console.log(i * i);
 }
+for (let i = 1; i <= 10; i++) {
+  console.log(7 * i);
+}
+let sum = 0;
+for (let i = 1; i <= 15; i++) {
+  sum += i;
+}
+console.log(sum);
+let product = 1;
+for (let i = 15; i <= 35; i++) {
+  product *= i;
+}
+console.log(product);
 
-arr.sort();
-arr.splice(1, 4);
-
-console.log("Вміст масиву:", arr);
+let sum2 = 0;
+for (let i = 1; i <= 500; i++) {
+  sum2+= i;
+}
+let average = sum2 / 500;
+console.log(average);
+for (let i = 100; i <= 200; i++) {
+  if (i % 3 === 0) {
+    console.log(i);
+  }
+}
