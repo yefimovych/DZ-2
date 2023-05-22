@@ -237,56 +237,66 @@ alert(` ${hours} годин = ${seconds} секунд`);
 // house.addApartment(apartment1);
 // house.addApartment(apartment2);
 
-class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
 
-  displayInfo() {
-    console.log(`Ім'я: ${this.name}, Вік: ${this.age}`);
+//   displayInfo() {
+//     console.log(`Ім'я: ${this.name}, Вік: ${this.age}`);
+//   }
+// }
+
+// class Car {
+//   constructor(brand, model, year, licensePlate) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.year = year;
+//     this.licensePlate = licensePlate;
+//     this.owner = null;
+//   }
+
+// assignOwner(person) {
+//   if (person.age > 18) {
+//     this.owner = person;
+//   } else {
+//     console.log(`Власник повинен бути старше 18 років.`);
+//   }
+// }
+// displayInfo() {
+//   console.log(`Марка: ${this.brand}, Модель: ${this.model}, Рік: ${this.year}, Номерний знак: ${this.licensePlate}`);
+//   if (this.owner) {
+//     console.log(`Власник:`);
+//     this.owner.displayInfo();
+//   }
+// }
+// }
+// const person1 = new Person("John", 26);
+// const person2 = new Person("Emily", 18);
+// const person3 = new Person("Michael", 33);
+
+// const car1 = new Car("Toyota", "Camry", 2017, "AB1834cD");
+// const car2 = new Car("Honda", "Civic", 2021, "EF5677GH");
+// const car3 = new Car("Ford", "Mustang", 2019, "IJ9112lL");
+
+// car1.assignOwner(person1);
+// car2.assignOwner(person2);
+// car3.assignOwner(person3);
+
+// car1.displayInfo();
+// console.log("--------");
+// car2.displayInfo();
+// console.log("--------");
+// car3.displayInfo();
+// console.log("--------");
+
+function un (num, degree) {
+  if (degree === 0) {
+    return 1;
   }
+  return num * un (num, degree - 1);
 }
 
-class Car {
-  constructor(brand, model, year, licensePlate) {
-    this.brand = brand;
-    this.model = model;
-    this.year = year;
-    this.licensePlate = licensePlate;
-    this.owner = null;
-  }
-
-assignOwner(person) {
-  if (person.age > 18) {
-    this.owner = person;
-  } else {
-    console.log(`Власник повинен бути старше 18 років.`);
-  }
-}
-displayInfo() {
-  console.log(`Марка: ${this.brand}, Модель: ${this.model}, Рік: ${this.year}, Номерний знак: ${this.licensePlate}`);
-  if (this.owner) {
-    console.log(`Власник:`);
-    this.owner.displayInfo();
-  }
-}
-}
-const person1 = new Person("John", 26);
-const person2 = new Person("Emily", 18);
-const person3 = new Person("Michael", 33);
-
-const car1 = new Car("Toyota", "Camry", 2017, "AB1834cD");
-const car2 = new Car("Honda", "Civic", 2021, "EF5677GH");
-const car3 = new Car("Ford", "Mustang", 2019, "IJ9112lL");
-
-car1.assignOwner(person1);
-car2.assignOwner(person2);
-car3.assignOwner(person3);
-
-car1.displayInfo();
-console.log("--------");
-car2.displayInfo();
-console.log("--------");
-car3.displayInfo();
-console.log("--------");
+console.log(un(4, 7)); 
+console.log(un(8, 1)); 
