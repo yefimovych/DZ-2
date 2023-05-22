@@ -187,52 +187,106 @@ alert(` ${hours} годин = ${seconds} секунд`);
 // }
 // console.log('Добуток позитивних елементів:', product);
 
+// class Person {
+//   constructor(name, gender) {
+//     this.name = name;
+//     this.gender = gender;
+//   }
+// }
+
+// class Apartment {
+//   constructor() {
+//     this.residents = [];
+//   }
+
+//   addResident(person) {
+//     this.residents.push(person);
+//   }
+// }
+
+// class House {
+//   constructor(maxApartments) {
+//     this.apartments = [];
+//     this.maxApartments = maxApartments;
+//   }
+
+//   addApartment(apartment) {
+//     if (this.apartments.length < this.maxApartments) {
+//       this.apartments.push(apartment);
+//     } else {
+//       console.log("Досягнуто максимальну кількість квартир у будинку.");
+//     }
+//   }
+// }
+
+// const person1 = new Person("John", "male");
+// const person2 = new Person("Emily", "female");
+// const person3 = new Person("Michael", "male");
+// const person4 = new Person("Sophia", "female");
+
+// const apartment1 = new Apartment();
+// const apartment2 = new Apartment();
+
+// apartment1.addResident(person1);
+// apartment1.addResident(person2);
+// apartment2.addResident(person3);
+// apartment2.addResident(person4);
+
+// const house = new House(2);
+
+// house.addApartment(apartment1);
+// house.addApartment(apartment2);
+
 class Person {
-  constructor(name, gender) {
+  constructor(name, age) {
     this.name = name;
-    this.gender = gender;
+    this.age = age;
+  }
+
+  displayInfo() {
+    console.log(`Ім'я: ${this.name}, Вік: ${this.age}`);
   }
 }
 
-class Apartment {
-  constructor() {
-    this.residents = [];
+class Car {
+  constructor(brand, model, year, licensePlate) {
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
+    this.licensePlate = licensePlate;
+    this.owner = null;
   }
 
-  addResident(person) {
-    this.residents.push(person);
-  }
-}
-
-class House {
-  constructor(maxApartments) {
-    this.apartments = [];
-    this.maxApartments = maxApartments;
-  }
-
-  addApartment(apartment) {
-    if (this.apartments.length < this.maxApartments) {
-      this.apartments.push(apartment);
-    } else {
-      console.log("Досягнуто максимальну кількість квартир у будинку.");
-    }
+assignOwner(person) {
+  if (person.age > 18) {
+    this.owner = person;
+  } else {
+    console.log(`Власник повинен бути старше 18 років.`);
   }
 }
+displayInfo() {
+  console.log(`Марка: ${this.brand}, Модель: ${this.model}, Рік: ${this.year}, Номерний знак: ${this.licensePlate}`);
+  if (this.owner) {
+    console.log(`Власник:`);
+    this.owner.displayInfo();
+  }
+}
+}
+const person1 = new Person("John", 26);
+const person2 = new Person("Emily", 18);
+const person3 = new Person("Michael", 33);
 
-const person1 = new Person("John", "male");
-const person2 = new Person("Emily", "female");
-const person3 = new Person("Michael", "male");
-const person4 = new Person("Sophia", "female");
+const car1 = new Car("Toyota", "Camry", 2017, "AB1834cD");
+const car2 = new Car("Honda", "Civic", 2021, "EF5677GH");
+const car3 = new Car("Ford", "Mustang", 2019, "IJ9112lL");
 
-const apartment1 = new Apartment();
-const apartment2 = new Apartment();
+car1.assignOwner(person1);
+car2.assignOwner(person2);
+car3.assignOwner(person3);
 
-apartment1.addResident(person1);
-apartment1.addResident(person2);
-apartment2.addResident(person3);
-apartment2.addResident(person4);
-
-const house = new House(2);
-
-house.addApartment(apartment1);
-house.addApartment(apartment2);
+car1.displayInfo();
+console.log("--------");
+car2.displayInfo();
+console.log("--------");
+car3.displayInfo();
+console.log("--------");
